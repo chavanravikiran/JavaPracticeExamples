@@ -1,4 +1,4 @@
-package Polymarphicem;
+package Polymorphism;
 
 public class MethodOverloading {
 	// Method with two int parameters
