@@ -2,7 +2,8 @@ package StringExample;
 
 public class StringOperationsExample {
     public static void main(String[] args) {
-        // 1. Creating Strings
+        
+    	// 1. Creating Strings
         String str1 = "Hello";
         String str2 = new String("World");
 
