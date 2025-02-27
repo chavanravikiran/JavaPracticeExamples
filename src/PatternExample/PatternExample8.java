@@ -22,8 +22,7 @@ public class PatternExample8 {
                 System.out.print("* ");
             }
             System.out.println();
-        }
-		
+        }		
 	}
 }
 
