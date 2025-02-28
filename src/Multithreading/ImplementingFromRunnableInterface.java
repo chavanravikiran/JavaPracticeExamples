@@ -1,4 +1,4 @@
-package Multitreading;
+package Multithreading;
 
 public class ImplementingFromRunnableInterface {
 	 public static void main(String[] args) {

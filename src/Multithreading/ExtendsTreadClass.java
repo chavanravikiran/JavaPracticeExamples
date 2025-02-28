@@ -1,4 +1,4 @@
-package Multitreading;
+package Multithreading;
 
 public class ExtendsTreadClass {
 
