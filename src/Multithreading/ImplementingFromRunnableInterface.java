@@ -2,7 +2,7 @@ package Multithreading;
 
 public class ImplementingFromRunnableInterface {
 	 public static void main(String[] args) {
-		 MyRunnable t =new MyRunnable();
+		MyRunnable t =new MyRunnable();
         Thread t1 = new Thread(t);
         t1.start();
      }
