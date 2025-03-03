@@ -1,8 +1,10 @@
 package Collections_ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 public class ArrayListExample2 {
 	public static void main(String args[]) {
@@ -18,6 +20,8 @@ public class ArrayListExample2 {
 		lists.add("C#");
 		lists.add("PHP");
 		lists.add(".Net");
+		lists.add("wicket");
+		lists.add("C++");
 		
 		// 3. Adding an element at a specific index
         lists.add(1, "Python");
@@ -70,7 +74,11 @@ public class ArrayListExample2 {
             System.out.println(iterator.next());
         }
 
-        // 14. Converting to an array
+        // 14. SubList
+        ArrayList<String> sublist = new ArrayList<String>(lists.subList(1, 7));
+        System.out.println("Show Sublist from 2 to 4" + sublist);
+        
+        // 15. Converting to an array
         String[] array = lists.toArray(new String[0]);
         System.out.println("Converted to array: ");
         for (String s : array) {
@@ -78,11 +86,38 @@ public class ArrayListExample2 {
         }
         
         System.out.println();
-        // 15. Clearing the list
+        
+        // 16. value swap
+        Collections.swap(sublist, 2, 5);
+        System.out.println("Swap array value" + sublist);
+        
+        // 17. lastIndex print
+        System.out.println("print Last Index" + sublist.lastIndexOf(iterator));
+       
+        // 18. toArray() - Convert ArrayList to Array
+        String[] fruitArray = lists.toArray(new String[0]);
+        System.out.println("Array from ArrayList: " + Arrays.toString(fruitArray));
+
+        // 19. asList() - Convert Array to List (Fixed-size list)
+        List<String> fruitList = Arrays.asList(fruitArray);
+        System.out.println("List from Array: " + fruitList);
+
+        // 20. toString() - Convert ArrayList to String
+        System.out.println("ArrayList as String: " + lists.toString());
+
+        // 21. lastIndexOf() - Find the last occurrence of an element
+        int lastIndex = lists.lastIndexOf(".Net");
+        System.out.println("Last index of '.Net': " + lastIndex);
+
+        // 22. clone() - Create a shallow copy of ArrayList
+        ArrayList<String> clonedList = (ArrayList<String>) lists.clone();
+        System.out.println("Cloned ArrayList: " + clonedList);
+        
+        // 23. Clearing the list
         lists.clear();
         System.out.println("After clearing: " + lists);
 
-        // 16. Checking if the list is empty
+        // 24. Checking if the list is empty
         System.out.println("Is the list empty? " + lists.isEmpty());
 	}
 }
