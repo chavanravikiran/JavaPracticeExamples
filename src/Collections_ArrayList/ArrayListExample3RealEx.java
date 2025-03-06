@@ -1,7 +1,6 @@
 package Collections_ArrayList;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class ArrayListExample3RealEx {
 
@@ -25,8 +24,6 @@ public class ArrayListExample3RealEx {
 				System.out.println(ss.studentId +" - "+ss.studentName);
 			}
 		}
-		
-		
 	}
 }
 
