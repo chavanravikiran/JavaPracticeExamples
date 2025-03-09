@@ -62,5 +62,8 @@ public class LinkedListExample2 {
         // Retrieving elements without removal
         System.out.println("Retrieve first element: " + list.getFirst());
         System.out.println("Retrieve last element: " + list.getLast());
+        
+        list.set(0,100);
+        System.out.println("update element at 0th index: " + list);
     }
 }
