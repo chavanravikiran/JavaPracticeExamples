@@ -6,7 +6,8 @@ import java.util.Iterator;
 // No Insertion Order Maintain
 // No Duplicate Element
 // Null Allowed but for only one time
-//	Faster for Searching Operation
+// Faster for Searching Operation
+// Non Synchronized
 public class HashSetBasicOperation {
 	public static void main(String[] args) {
 		
