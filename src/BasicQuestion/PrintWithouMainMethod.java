@@ -6,6 +6,6 @@ public class PrintWithouMainMethod {
 	//Instance Block
 	static {
 		System.out.println("Print Statement Without Main Method write using Instance Block");
-		System.exit(0);
+		System.exit(0);//JVM shutdown 
 	}
 }
