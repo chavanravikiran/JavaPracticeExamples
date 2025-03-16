@@ -19,6 +19,7 @@ public class PriorityQueueExample {
         pq.add(10);
         pq.add(50);
         pq.add(20);
+        pq.add(20);
 
         System.out.println("PriorityQueue: " + pq); // Order may not be sorted when printed
 
