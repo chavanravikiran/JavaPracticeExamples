@@ -14,8 +14,7 @@ public class ClinicAppointmentSystem {
         doctorMap.put(102, "Dr. Johnson - Neurologist");
         doctorMap.put(103, "Dr. Brown - Dermatologist");
 
-        Set<Entry<Integer, String>> set=  doctorMap.entrySet();
-        for (Entry<Integer, String> entry : set) {
+        for (Entry<Integer, String> entry : doctorMap.entrySet()) {
         	System.out.println("Doctor ID: " + entry.getKey() + ", Name: " + entry.getValue());
 		}
         
