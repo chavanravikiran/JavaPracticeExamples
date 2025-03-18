@@ -57,6 +57,5 @@ public class HashtableOperations {
         // 10 Clearing the Hashtable
         hashtable.clear();
         System.out.println("Hashtable after clear(): " + hashtable);
-        
     }
 }
