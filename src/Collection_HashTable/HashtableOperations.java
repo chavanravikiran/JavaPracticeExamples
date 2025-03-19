@@ -40,6 +40,7 @@ public class HashtableOperations {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
 
+        
         // Iterating using Enumeration
         System.out.println("\nIterating using Enumeration:");
         Enumeration<Integer> keys = hashtable.keys();
