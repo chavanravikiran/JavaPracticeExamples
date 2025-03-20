@@ -39,7 +39,6 @@ public class HashtableOperations {
         for (Map.Entry<Integer, String> entry : hashtable.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
-
         
         // Iterating using Enumeration
         System.out.println("\nIterating using Enumeration:");
