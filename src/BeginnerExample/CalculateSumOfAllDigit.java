@@ -2,6 +2,7 @@ package BeginnerExample;
 
 import java.util.Scanner;
 
+
 //Calculate Sum of All Digit like 1234 sum is = 10  
 //1+2+3+4=10
 public class CalculateSumOfAllDigit {
