@@ -1,10 +1,9 @@
 package OOPSExample;
 
-import java.util.ArrayList;
-
 public class AutoboxingUnboxingExample {
 	public static void main(String[] args) {
-        // Autoboxing: Primitive → Wrapper
+        
+		// Autoboxing: Primitive → Wrapper
         int num = 10;       // Primitive
         Integer obj = num;  // Autoboxing (int → Integer)
         System.out.println("Autoboxed Integer: " + obj);
