@@ -11,7 +11,7 @@ public class FindLongestWordIinSentence {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Original String");
-		String string=sc.nextLine();//nextLine() -Take Line From Uses ,next()--OnlyTake Single Word
+		String string=sc.nextLine(); //nextLine() -Take Line From Uses ,next()--OnlyTake Single Word
 
 		findLongestWord(string);
 	}
