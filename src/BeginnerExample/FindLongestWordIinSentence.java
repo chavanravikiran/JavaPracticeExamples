@@ -16,6 +16,7 @@ public class FindLongestWordIinSentence {
 		findLongestWord(string);
 	}
 
+	
 	private static void findLongestWord(String string) {
 		HashMap<String, Integer> map = new HashMap<>();
 		String[] afterSplit = string.split(" ");
