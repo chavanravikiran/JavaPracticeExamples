@@ -14,7 +14,6 @@ public class CharFrequency {
         for (char ch : input.toCharArray()) {
             freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
         }
-        
         System.out.println(freqMap);
 	}
 }
