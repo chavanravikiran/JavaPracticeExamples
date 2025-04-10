@@ -3,7 +3,6 @@ package Collection_HashMap;
 import java.util.HashMap;
 import java.util.Map;
 
-
 //Write a program to count the frequency of characters in a string using Map.
 public class CharFrequency {
 	public static void main(String[] args) {
