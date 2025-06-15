@@ -31,5 +31,5 @@ public class CombinePredicateAndFunctionEx {
 						.collect(Collectors.toList());
 		
 		System.out.println(result);
-		}
+	}
 }
