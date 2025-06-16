@@ -6,7 +6,6 @@ package Java8Feature_MethodReference;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 //Why Use Method Reference ?
 //Instead of writing a lambda expression, you can refer to an existing method if it matches the signature
