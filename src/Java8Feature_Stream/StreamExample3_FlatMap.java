@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-//FlatMap--To convert Multiple List to Single List
+//FlatMap--To convert Multiple List to one Single List(flatend list)
 public class StreamExample3_FlatMap {
 	
 	public static void main(String[] args) {
