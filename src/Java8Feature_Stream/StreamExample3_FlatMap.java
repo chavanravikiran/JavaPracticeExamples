@@ -42,6 +42,5 @@ public class StreamExample3_FlatMap {
 		
 		//Converting multiple List to one Single List
 		System.out.println(map.values().stream().flatMap(List::stream).collect(Collectors.toList()));
-		
 	}
 }
