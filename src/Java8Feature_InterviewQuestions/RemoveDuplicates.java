@@ -22,9 +22,7 @@ public class RemoveDuplicates {
 		usingStream(word);
 	}
 
-
-
-
+	
 	private static void usingTraditional(String word) {
 		Arrays.stream(word.split("")).distinct().forEach(System.out::print);
 	}
