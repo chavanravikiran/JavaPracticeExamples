@@ -35,9 +35,6 @@ public class CollectorsMethodTerminalOperation {
 				.collect(Collectors.toMap(x->x.length(), x->x,(oldValue,newValue)->oldValue +" : "+newValue));
 		System.out.println(toMap1);
 		
-		//groupingBy
-		
-		
 		//count from stream class and counting from Collectors class
 		Long count=list.stream().count();
 		Long counting=list.stream().collect(Collectors.counting());
@@ -53,7 +50,7 @@ public class CollectorsMethodTerminalOperation {
 				.collect(Collectors.partitioningBy(x->x.length()>3)));
 
 		//Or
-		Map<Boolean, List<String>>partitioningBy = list.stream()
+		Map<Boolean, List<String>>partitioningBy = list.stream() 
 						.collect(Collectors.partitioningBy(x->x.length()>3));
 		System.out.println(partitioningBy);
 		
@@ -62,5 +59,18 @@ public class CollectorsMethodTerminalOperation {
 		.collect(Collectors.partitioningBy(x->x.length()>3, Collectors.counting()));
 		System.out.println(downStreamPartitioning);
 		
+		//groupingBy
+		Map<Object, List<String>> grouping = list.stream()
+		.collect(Collectors.groupingBy(x->x.length()));
+		System.out.println(grouping);
+		
+		//grouping 2nd example
+		Map<Object, String> grouping1 = list.stream()
+		.collect(Collectors.groupingBy(x->x.length(),Collectors.joining("_")));
+		System.out.println(grouping1);
+		
+		Map<Object, List<Object>> grouping2 =list.stream()
+		.collect(Collectors.groupingBy(x->x.length(),Collectors.mapping(x->x.toUpperCase(), Collectors.toList())));
+		System.out.println(grouping2);
 	}
 }
