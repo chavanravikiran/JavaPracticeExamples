@@ -3,7 +3,7 @@ package InterviewQuestionsOnCollections;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;import java.util.stream.Collector;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CollectorsMethodTerminalOperation {
@@ -47,5 +47,20 @@ public class CollectorsMethodTerminalOperation {
 		//Joining
 		System.out.println(list.stream().collect(Collectors.joining(",")));
 		System.out.println(list.stream().collect(Collectors.joining(",", "!", "@")));
+		
+		//partitioningBy
+		System.out.println(list.stream()
+				.collect(Collectors.partitioningBy(x->x.length()>3)));
+
+		//Or
+		Map<Boolean, List<String>>partitioningBy = list.stream()
+						.collect(Collectors.partitioningBy(x->x.length()>3));
+		System.out.println(partitioningBy);
+		
+		//partitioningBy downstream
+		Map<Boolean, Long> downStreamPartitioning= list.stream()
+		.collect(Collectors.partitioningBy(x->x.length()>3, Collectors.counting()));
+		System.out.println(downStreamPartitioning);
+		
 	}
 }
