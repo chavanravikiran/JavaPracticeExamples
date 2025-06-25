@@ -3,7 +3,7 @@ package Java8Feature_InterviewQuestions;
 import java.util.Arrays;
 
 //Get Product of first 2 element 
-public class GetProductionOfIntArray {
+public class GetProductOfIntArray {
 	public static void main(String[] args) {
 		int [] a = {1,2,3,4,5,6};
 		
