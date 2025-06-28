@@ -1,5 +1,6 @@
 package Java8Feature_InterviewQuestions;
 
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,9 +29,10 @@ public class FibonacciExample {
 	    // 🔹 Method 2: Stream-based approach
 	    public static void printFibonacciWithStream(int n) {
 	        System.out.println(
-	        		Stream.iterate(new int[] {0,1}, f -> new int[] {f[1],f[0]+f[1]})
-	    	        .limit(n)
-	    	        .collect(Collectors.toList())
-	    	);
+	        		Stream.iterate(new int[]{0, 1}, f -> new int[]{f[1], f[0] + f[1]})
+		            .limit(n)
+		            .map(f -> f[0])
+		            .collect(Collectors.toList())
+		      );
 	    }
 }
