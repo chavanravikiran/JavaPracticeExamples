@@ -11,5 +11,7 @@ public class ConvertStringToCollectionOfStrings {
 		
 		Collection<String> collection=Arrays.asList(string.split(","));
 		System.out.println(collection);
+		
+		
 	}
 }
