@@ -33,6 +33,7 @@ public class ArrayListExample3 {
 		Collections.sort(lists);
 		System.out.println(lists);
 		
+		
 		//clone 
 		ArrayList<String> newList = new ArrayList<>();
 		System.out.println("To Check if arrayList is empty or not");
