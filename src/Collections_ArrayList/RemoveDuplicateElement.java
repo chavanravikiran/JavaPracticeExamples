@@ -2,6 +2,7 @@ package Collections_ArrayList;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.stream.Collectors;
 
 public class RemoveDuplicateElement {
 	public static void main(String[] args) {
@@ -32,12 +33,19 @@ public class RemoveDuplicateElement {
 		
 		//Without LinkedHashSet
 		removeDuplicate(aList);
+		
+		//Using Stream
+		removeDuplicateUsingStream(aList);
 	}
 
 
 	private static void removeDuplicateElelement(ArrayList<Integer> aList) {
+		LinkedHashSet<Integer> linkedHashSet1 = new LinkedHashSet<>();
+		linkedHashSet1.addAll(aList);
+		System.out.println("Using LinkedHashSet 1st Way "+linkedHashSet1);
+		
 		LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>(aList);
-		System.out.println("Using LinkedHashSet "+linkedHashSet);
+		System.out.println("Using LinkedHashSet Way 2nd "+linkedHashSet);
 	}
 	
 	private static void removeDuplicate(ArrayList<Integer> aList) {
@@ -56,4 +64,10 @@ public class RemoveDuplicateElement {
 	    System.out.println("Using Manual Code Duplicate "+duplicateList);
 	}
 
+	private static void removeDuplicateUsingStream(ArrayList<Integer> aList) {
+		System.out.println(aList.stream()
+			.distinct()
+			.collect(Collectors.toList())
+		);
+	}
 }
