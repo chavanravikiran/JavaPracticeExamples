@@ -1,6 +1,7 @@
 package Collection_LinkedList;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListMethodsExample {
 	
@@ -29,6 +30,12 @@ public class LinkedListMethodsExample {
         list.push("PushElement");
         System.out.println("After push: " + list);
 
+        //iterate
+        System.out.println("\n === Iterator using ListIterator ===" );
+        ListIterator<String> itr = list.listIterator();
+        while (itr.hasNext()) {
+        	System.out.println(itr.next());
+		}
         System.out.println("\n=== Accessing Elements ===");
 
         // 3. getFirst()
@@ -77,5 +84,7 @@ public class LinkedListMethodsExample {
         // 15. pop()--This method is used to pop an element from the stack represented by a list.
         System.out.println("pop(): " + list.pop());
         System.out.println("List after pop: " + list);
+        
+        
 	}
 }
