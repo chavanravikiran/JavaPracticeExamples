@@ -11,5 +11,18 @@ public class FirstNonRepeatedCharacter {
 				.filter(x->word.indexOf(x) == word.lastIndexOf(x))
 				.findFirst().get()
 		);
+		
+		char result = firstNonRepeatedCharacter(word);
+        System.out.println(result);
 	}
+	
+	public static char firstNonRepeatedCharacter(String word) {
+        for (int i = 0; i < word.length(); i++) {
+            char currentChar = word.charAt(i);
+            if (word.indexOf(currentChar) == word.lastIndexOf(currentChar)) {
+                return currentChar;
+            }
+        }
+        return '\0';  // No non-repeated character
+    }
 }
