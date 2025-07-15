@@ -11,7 +11,8 @@ public class DuplicateCharacterCount {
 		System.out.println("Enter Original String");
 		String string=sc.nextLine();//nextLine() -Take Line From Uses ,next()--OnlyTake Single Word
 
-		duplicateCharacterCount(string);		
+		duplicateCharacterCount(string);
+		
 	}
 
 	private static void duplicateCharacterCount(String string) {
