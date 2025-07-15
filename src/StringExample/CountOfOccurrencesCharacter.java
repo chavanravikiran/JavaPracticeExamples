@@ -21,3 +21,5 @@ public class CountOfOccurrencesCharacter {
 		return count;
 	}
 }
+
+
