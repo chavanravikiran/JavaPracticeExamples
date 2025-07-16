@@ -8,7 +8,7 @@ import java.util.ListIterator;
 //Introduce in JDK 1.2
 //Remove Operation, add and modified operation Perform
 //Forword Direction As well AS Backword Direction
-//Works onlu List (ArrayList and LinkedList)
+//Works only List (ArrayList and LinkedList)
 public class LitsIterator_Ex {
 
 	 public static void main(String[] args) {
