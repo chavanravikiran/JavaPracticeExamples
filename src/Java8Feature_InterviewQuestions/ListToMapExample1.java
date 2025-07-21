@@ -15,8 +15,8 @@ public class ListToMapExample1 {
 		numbers.add(12);
 		numbers.add(14);
 		
-		Map<Integer,Integer> num= numbers.stream()
-		.collect(Collectors.toMap(x->x, x->x));
+		Map<Integer,Integer> num = numbers.stream()
+									.collect(Collectors.toMap(x->x, x->x));
 		
 		System.out.println(num);
 	}
