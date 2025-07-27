@@ -29,5 +29,6 @@ public class FirstNonRepeatingIneger {
 		            .orElse(null);
 
 		        System.out.println("First non-repeating number: " + result1);
+		        
 	}
 }
