@@ -1,7 +1,10 @@
 package Java8Feature_InterviewQuestions;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 //Question:-Java finds the longest word easily using streams or normal way
 public class LongestWordFinder {
@@ -16,7 +19,12 @@ public class LongestWordFinder {
 		//New Techniques -using Stream
 		String newTechniques=usingNewTechnique(sentence);
 		System.out.println(newTechniques);
+		
+		//New Techniques -- Using Stream
+		String newTechniques1=usingNewTechniqueNew(sentence);
+		System.out.println(newTechniques1);
 	}
+
 
 	private static String usingOldTechnique(String sentence) {
 		String longestWord ="";
@@ -34,5 +42,18 @@ public class LongestWordFinder {
 				.max((x,y) -> Integer.compare(x.length(), y.length()));
 		
 		return "longest Word is '"+longestWord.get() +"' and lenght of this word is "+longestWord.get().length();
+	}
+
+	private static String usingNewTechniqueNew(String sentence) {
+		Map<Integer,String> map = Arrays.stream(sentence.split(" "))
+		.collect(Collectors.toMap(x->x.length(), x->x,(existing, replacement) -> existing));
+		
+		System.out.println("---------"+map.entrySet().stream()
+	    .sorted((e1, e2) -> e2.getKey() - e1.getKey()) // sort by key descending
+//	    .sorted(Map.Entry.<Integer, String>comparingByKey(Comparator.reverseOrder()))
+	    .findFirst());
+		
+		
+		return null;
 	}
 }
