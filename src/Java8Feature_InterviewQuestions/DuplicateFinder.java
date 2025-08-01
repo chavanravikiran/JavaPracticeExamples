@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+// find duplicate elements in a list and count their occurrences
 public class DuplicateFinder {
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 1, 2, 4, 5, 3, 2, 2);

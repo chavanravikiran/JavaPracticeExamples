@@ -6,6 +6,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 //Convert to uppercase and concat
+// Reduce:- To combine all elements of a stream into a single result.
+//Why use reduce()?
+//	Because it returns one single result like (e.g., total, product, min, max, string join, etc.)	
 public class ConvertToUppercaseAndContact {
 	public static void main(String[] args) {		
 		List<String> str = Arrays.asList("a","b","c","d","e","f");
