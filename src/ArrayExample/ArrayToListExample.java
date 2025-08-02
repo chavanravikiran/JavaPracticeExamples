@@ -3,6 +3,7 @@
 import java.util.Arrays;
 import java.util.List;
 
+//Array is data structure and it store homogenious data.
 public class ArrayToListExample {
 	 public static void main(String[] args) {
 	        String[] array = {"RAVI", "KIRAN", "ATUL", "CHAVAN"};
