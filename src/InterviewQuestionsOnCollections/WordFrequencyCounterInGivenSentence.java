@@ -1,7 +1,11 @@
 package InterviewQuestionsOnCollections;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class WordFrequencyCounterInGivenSentence {
 	public static void main(String[] args) {
@@ -9,8 +13,11 @@ public class WordFrequencyCounterInGivenSentence {
 		System.out.println("Enter Original String");
 		String string=sc.nextLine();//nextLine() -Take Line From Uses ,next()--OnlyTake Single Word
 
-		wordCountInPara(string.toLowerCase());		
+		wordCountInPara(string.toLowerCase());	
+		
+		withStream(string.toLowerCase());
 	}
+
 
 	private static void wordCountInPara(String string) {
 		String [] words = string.split(" ");
@@ -25,5 +32,14 @@ public class WordFrequencyCounterInGivenSentence {
 		}
 		System.out.println("Count of Characters in a given string : " + charCountMap);
 		
+	}
+
+	private static void withStream(String lowerCase) {
+		String[] list =lowerCase.split(" ");
+
+		Map<String, Long> wordFrequency = Arrays.stream(list)
+                .collect(Collectors.groupingBy(x->x, Collectors.counting()));
+		
+		System.out.println("Count of Characters in a given string : " + wordFrequency);
 	}
 }
