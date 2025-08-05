@@ -29,11 +29,18 @@ public class AscendingAndDescendingArrayList {
 		}
 	}
 	private static void descending(ArrayList<Integer> aList) {
-		System.out.println("After Descending Order");
+		System.out.println("After Descending Order - Approch 1");
 		
+		Collections.reverse(aList);
+//		Collections.sort(aList,Collections.reverseOrder());
+		for (Integer itr : aList) {
+			System.out.println(itr);
+		}	
+		
+		System.out.println("After Descending Order - Approch -2");
 		Collections.sort(aList,Collections.reverseOrder());
 		for (Integer itr : aList) {
 			System.out.println(itr);
-		}		
+		}	
 	}
 }
