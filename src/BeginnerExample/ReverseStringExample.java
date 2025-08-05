@@ -1,5 +1,8 @@
 package BeginnerExample;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 //Ravikiran  ->narikivaR
@@ -17,7 +20,10 @@ public class ReverseStringExample {
 		StringBuffer sf = new StringBuffer(string);
 		System.out.println("Reverse Using String Builder Reverse Method "+sb.reverse());
 		System.out.println("Reverse Using String Buffer  Reverse Method "+sf.reverse());
+		
+		usingStream(string);
 	}
+
 
 	private static String reverseString(String string) {
 		int size = string.length();
@@ -29,6 +35,13 @@ public class ReverseStringExample {
 		}
 		return nstr;
 	}
+	
+	private static void usingStream(String string) {
+		List<String> list = Arrays.asList(string.split(""));
+		Collections.reverse(list);
+		System.out.println("----------"+String.join("", list));
+	}
+	
 	
 	
 }
