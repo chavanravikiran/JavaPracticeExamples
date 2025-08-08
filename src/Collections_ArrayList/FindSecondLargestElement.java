@@ -1,6 +1,7 @@
 package Collections_ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.TreeSet;
 public class FindSecondLargestElement {
 	public static void main(String[] args) {
 		ArrayList<Integer> array = new ArrayList<>();
+		ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(12,23));
 		array.add(40);
 		array.add(13);
 		array.add(44);

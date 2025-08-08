@@ -1,7 +1,10 @@
 package InterviewQuestionsOnCollections;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 // Question:-Find Intersection of Two Arrays using Set 
 // Output :-Intersection: 2 3 5 
@@ -18,7 +21,9 @@ public class ArrayIntersection {
         for (int num : intersection) {
             System.out.print(num + " ");
         }
+        findIntersectionUsingStream(arr1,arr2);
     }
+
 
 	private static Set<Integer> findIntersection(int[] arr1, int[] arr2) {
 		Set<Integer> set1 = new HashSet<>();
@@ -37,5 +42,21 @@ public class ArrayIntersection {
         }
         
 		return resultSet;
+	}
+
+	private static void findIntersectionUsingStream(int[] arr1, int[] arr2) {
+		List<Integer> list1 = Arrays.stream(arr1)
+                .boxed() 
+                .collect(Collectors.toList());
+		
+		List<Integer> list2 = Arrays.stream(arr2)
+                .boxed() 
+                .collect(Collectors.toList());
+		
+		System.out.println("\nUsing Stream :"+
+				list1.stream()
+				.filter(x->list2.contains(x))
+				.collect(Collectors.toList())
+		);
 	}
 }
