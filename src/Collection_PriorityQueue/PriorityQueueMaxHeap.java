@@ -18,6 +18,7 @@ public class PriorityQueueMaxHeap {
         // Removing elements (largest first)
         System.out.println("Polling: " + pq.poll()); // 50
         System.out.println("Polling: " + pq.poll()); // 30
+        pq.add(100);
         System.out.println("Remaining Queue: " + pq);
 	 }
 }

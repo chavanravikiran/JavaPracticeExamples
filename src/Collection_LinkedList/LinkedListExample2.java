@@ -55,6 +55,7 @@ public class LinkedListExample2 {
         Collections.sort(list);
         System.out.println("After sorting: " + list);
 
+//        Collections.sort(list,Collections.reverseOrder());
         // Sorting with custom comparator (Descending order)
         list.sort(Comparator.reverseOrder());
         System.out.println("After sorting in descending order: " + list);

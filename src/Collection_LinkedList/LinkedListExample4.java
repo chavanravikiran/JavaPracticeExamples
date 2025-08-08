@@ -12,7 +12,7 @@ public class LinkedListExample4 {
 	  list.add(50);
 	  list.add(2, 60);
 	  list.add(60);
-   
+   //40,20,60,30,50,60
 	  System.out.println("original Linked List :"+list); ////40,20,60,30,50,60
 	  System.out.println(list.peekFirst());//40
 	  System.out.println(list.peekLast());//60
