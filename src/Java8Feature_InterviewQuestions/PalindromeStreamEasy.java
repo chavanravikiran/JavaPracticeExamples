@@ -2,6 +2,7 @@ package Java8Feature_InterviewQuestions;
 
 import java.util.stream.IntStream;
 
+
 //Palindrome Example
 public class PalindromeStreamEasy {
 	public static void main(String[] args) {
