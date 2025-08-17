@@ -3,6 +3,7 @@ package Java8Feature_InterviewQuestions;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class FlatMapExample {
 	public static void main(String[] args) {
@@ -12,6 +13,6 @@ public class FlatMapExample {
 				list.stream()
 				.flatMap(x->Arrays.stream(x.split(" ")))
 				.collect(Collectors.toList())
-		);
+		);		
 	}
 }

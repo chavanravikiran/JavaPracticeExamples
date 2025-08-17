@@ -14,6 +14,5 @@ public class UnionOfTwoList {
 				Stream.concat(list1.stream(),list2.stream())
 				.collect(Collectors.toList())
 		);
-	
 	}
 }

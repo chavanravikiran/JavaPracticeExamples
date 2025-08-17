@@ -12,7 +12,6 @@ public class ConverStringToInteger {
 		System.out.println(
 				str.stream()
 				.map(x -> Integer.parseInt(x))
-//				.map(Integer::parseInt) 
 				.collect(Collectors.toList())
 				
 		);
