@@ -23,7 +23,7 @@ public class StringJoinUsingObject {
 		System.out.println(result);
 		
 		String getOnlyName = people.stream()
-			    .map(Person::toString)
+			    .map(Person::getName)
 			    .collect(Collectors.joining(" | "));
 		System.out.println(getOnlyName);
 		
