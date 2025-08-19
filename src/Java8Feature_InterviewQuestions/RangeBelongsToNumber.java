@@ -21,5 +21,5 @@ public class RangeBelongsToNumber {
 		Map<Object, List<Integer>>list2=Arrays.stream(a).boxed()
 				.collect(Collectors.groupingBy(x->x/10*10,LinkedHashMap::new, Collectors.toList()));
 		System.out.println(list2);
-	}
+	}	
 }
