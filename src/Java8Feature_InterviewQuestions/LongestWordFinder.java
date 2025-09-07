@@ -2,6 +2,7 @@ package Java8Feature_InterviewQuestions;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -21,9 +22,12 @@ public class LongestWordFinder {
 		System.out.println(newTechniques);
 		
 		//New Techniques -- Using Stream
-		String newTechniques1=usingNewTechniqueNew(sentence);
-		System.out.println(newTechniques1);
+		usingNewTechniqueNew(sentence);
+		
+		usingNewStream(sentence);
 	}
+
+
 
 
 	private static String usingOldTechnique(String sentence) {
@@ -55,5 +59,16 @@ public class LongestWordFinder {
 		
 		
 		return null;
+	}
+
+	private static void usingNewStream(String sentence) {
+		List<String> list = Arrays.asList(sentence.split(" "));
+		
+		System.out.println(
+				list.stream()
+				.sorted((a,b)->Integer.compare(b.length(), a.length()))
+				.findFirst()
+				.get()
+		);
 	}
 }
