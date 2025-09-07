@@ -17,10 +17,18 @@ public class NthLongestWord {
 		System.out.println(Arrays.stream(sentence.split(" ")).sorted(Comparator.comparing(String::length)).skip(1).findFirst().get());
 	
 		System.out.println(Arrays.stream(sentence.split(" "))
-		.sorted(Collections.reverseOrder(Comparator.comparingInt(String::length)))
-		.skip(1)
-		.findFirst()
-		.get()
+			.sorted(Collections.reverseOrder(Comparator.comparingInt(String::length)))
+			.skip(1)
+			.findFirst()
+			.get()
 		);
+		
+		System.out.println(Arrays.stream(sentence.split(" "))
+				.sorted((a,b)->Integer.compare(b.length(), a.length()))
+					.skip(1)
+				.findFirst()
+				.get()
+			);
+		
 	}
 }
