@@ -16,7 +16,7 @@ public class FunctionInterfaceCustomObject {
 		List<Student> students = Arrays.asList(s1, s2, s3, s4, s5);
 		
 		for (Student student : students) {
-			System.out.println(student);
+//		/System.out.println(student);
 		}	
 		
 		//find out Student List which is name starts with Ravi
@@ -25,7 +25,7 @@ public class FunctionInterfaceCustomObject {
 			for (Student student : students) {
 				if (student.getName().startsWith("Ravi")) {
 					result.add(student);
-				}; 
+				}
 			}
 			return result;
 		};
