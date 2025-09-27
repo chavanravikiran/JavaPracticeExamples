@@ -22,7 +22,7 @@ public class AverageOfPostiveNo {
 				count++;
 				sum=sum+numbers.get(i);
 			}
-		}
+		}	
 		System.out.println("Average is :"+ sum/count);
 	}
 
