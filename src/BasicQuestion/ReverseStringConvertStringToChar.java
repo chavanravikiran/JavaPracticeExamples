@@ -3,7 +3,9 @@ package BasicQuestion;
 public class ReverseStringConvertStringToChar {
 	public static void main(String[] args) {
 		String str = "hello";
-		System.out.println(reverseStringFuction(str));
+		System.out.println("Using for Loop :"+reverseStringFuction(str));
+		System.out.println("Using  :"+reverseStringFuction(str));
+		
 	}
 	
 	public static String reverseStringFuction(String str) {
@@ -13,4 +15,5 @@ public class ReverseStringConvertStringToChar {
 		}
 		return temp;
 	}
+	
 }
