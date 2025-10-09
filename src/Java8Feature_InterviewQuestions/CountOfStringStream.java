@@ -12,8 +12,10 @@ public class CountOfStringStream {
 		 String s="World Hello , Hello Welcome to Interview";
 	      
 	      
-	        Map<String,Long> wordCount=Arrays.stream(s.replace(" , ", " ").split(" "))
-	        				.collect(Collectors.groupingBy(x->x,Collectors.counting()));
+	      Map<String,Long> wordCount=Arrays.stream(s.replace(" , ", " ").split(" "))
+	        			.collect(Collectors.groupingBy(x->x,Collectors.counting()));
+	        
+	      System.out.println(wordCount);
 	        
 	      LinkedHashMap<String, Long> sortedMap = wordCount.entrySet()
 	                .stream()
