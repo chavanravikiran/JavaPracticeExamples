@@ -50,6 +50,7 @@ public class PairSumLike10 {
 		        pairs.forEach(System.out::println);
 	}
 
+	
 	private static void usingHashSet(List<Integer> nums, Integer target) {
 		Set<Integer> seen = new HashSet<>();
 		for (int num : nums) {
