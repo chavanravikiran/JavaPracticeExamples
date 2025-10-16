@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-//aaabbbcccc a3b3c4 ha output 
+//input aaabbbcccc output a3b3c4 
 public class FindOutRepeatedCharectorAndArrange {
 	public static void main(String[] args) {
 		String str = "aaabbbcccc";
