@@ -40,6 +40,7 @@ public class LongestWordFinder {
 		}
 		return "longest Word is '"+longestWord +"' and lenght of this word is "+longestWord.length();
 	}
+	
 
 	private static String usingNewTechnique(String sentence) {
 		Optional<String> longestWord = Arrays.stream(sentence.split(" "))
