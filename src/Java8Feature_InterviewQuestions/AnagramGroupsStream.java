@@ -15,6 +15,7 @@ public class AnagramGroupsStream {
         System.out.println(traditionWay);
 	}
 
+	
 	public static List<List<String>> groupAnagrams(List<String> words) {
         return new ArrayList<>(
             words.stream()
