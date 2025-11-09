@@ -23,7 +23,11 @@ public class CharFrequency {
 		Map<Character, Integer> freqMap = new HashMap<>();
         
         for (char ch : input.toCharArray()) {
-            freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
+//            freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
+            if (freqMap.containsKey(ch))
+                freqMap.put(ch, freqMap.get(ch) + 1);
+            else
+                freqMap.put(ch, 1);
         }
         return freqMap;
 	}
