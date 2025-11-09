@@ -24,18 +24,18 @@ public class RemoveDuplicates {
 
 	
 	private static void usingTraditional(String word) {
-		Arrays.stream(word.split("")).distinct().forEach(System.out::print);
-	}
-
-	private static void usingStream(String word) {
 		String newString = "";
 		for (int i = 0; i < word.length(); i++) {
 			char ch = word.charAt(i);//return single charactor from string
 			if (newString.indexOf(ch) == -1) {//Return Index and pass char
 				newString += ch;
-            }
+			}
 		}
 		System.out.println("Result: " +newString);
+	}
+
+	private static void usingStream(String word) {
+		Arrays.stream(word.split("")).distinct().forEach(System.out::print);
 	}
 	
 	private static void usingHashSet(String word) {
