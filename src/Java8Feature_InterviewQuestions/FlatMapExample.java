@@ -13,6 +13,13 @@ public class FlatMapExample {
 				list.stream()
 				.flatMap(x->Arrays.stream(x.split(" ")))
 				.collect(Collectors.toList())
-		);		
+		);
+		
+		List<String> result = Arrays.asList(
+		        String.join(" ", list)		//Joins all strings with a space -> "Hello world Java streams"
+		        .split(" ")
+		);
+
+		System.out.println(result);
 	}
 }
