@@ -10,6 +10,9 @@ public class IntersectionElementFromTwoList {
 		List<Integer> list1 = Arrays.asList(1,2,3,4,5);
 		List<Integer> list2 = Arrays.asList(2,4,5,6,7);
 		
-		System.out.println(list1.stream().filter(x->list2.contains(x)).collect(Collectors.toList()));
+		System.out.println(list1.stream()
+				.filter(x->list2.contains(x))
+				.map(x->x)
+				.collect(Collectors.toList()));
 	}
 }
