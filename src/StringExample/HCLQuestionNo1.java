@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 //Output llab
 public class HCLQuestionNo1 {
 	public static void main(String[] args) {
-		String input = "ellabb";
+		String input = "test";
 		
 		Map<String, Long> freq =  Arrays.stream(input.split(""))
                         .collect(Collectors.groupingBy(x -> x, Collectors.counting()));
