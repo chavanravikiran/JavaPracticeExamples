@@ -11,7 +11,7 @@ public class GroupByMiddleCharector {
 	public static void main(String[] args) {
 		String[] str = {"ewe","jhj","rwd","gwj","dhj","gjs","djg","fsg"};
 		
-		System.out.println(Arrays.stream(str).collect(Collectors.groupingBy(x->x.toString().substring(1, 2))));
+		System.out.println(Arrays.stream(str).collect(Collectors.groupingBy(x->x.substring(1, 2))));
 		
 	
 		System.out.println(Stream.of(str).collect(Collectors.groupingBy(x->x.toString().substring(1, 2))));
