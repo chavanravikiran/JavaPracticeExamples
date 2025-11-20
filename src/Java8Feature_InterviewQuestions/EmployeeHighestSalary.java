@@ -35,6 +35,7 @@ public class EmployeeHighestSalary {
         // STEP 3: Print results
         highestSalaryByDept.forEach((dept, emp) ->
                 System.out.println(dept + " -> " + emp.getName() + " : " + emp.getSalary()));
+        
     }
 }
 
