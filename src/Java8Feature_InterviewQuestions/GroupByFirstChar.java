@@ -10,7 +10,7 @@ public class GroupByFirstChar {
         List<String> words = Arrays.asList("apple", "banana", "apricot", "blueberry", "cherry", "avocado");
         
         System.out.println(words.stream()
-        .map(x->x)
+//        .map(x->x)
         .collect(Collectors.groupingBy(x->x.charAt(0),Collectors.counting())));
 	}
 }
