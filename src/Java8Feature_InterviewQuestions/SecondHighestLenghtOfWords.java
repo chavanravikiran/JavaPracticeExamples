@@ -11,5 +11,10 @@ public class SecondHighestLenghtOfWords {
 			.skip(1)
 			.findFirst().get()
 		);
+		
+		System.out.println(Arrays.stream(str.split(" "))
+				.sorted((a,b)->Integer.compare(b.length(), a.length()))
+				.findFirst().get().length()
+			);
 	}
 }
