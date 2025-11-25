@@ -28,7 +28,7 @@ public class CognizantInterviewQuestion3 {
 	private static void usingStream(String str) {
 		System.out.println(
 				Arrays.stream(str.split(" "))
-				.map(word-> new StringBuilder(word).reverse().toString())
+				.map(word-> new StringBuilder(word).reverse())
 				.collect(Collectors.joining(" "))
 		);
 	}
