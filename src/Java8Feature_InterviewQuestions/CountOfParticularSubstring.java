@@ -18,6 +18,7 @@ public class CountOfParticularSubstring {
 		System.out.println(count);
 		
 		int count1 = anotherWay(str,find);
+		
 		System.out.println(count1);
 		
 		int count2 = anotherWay2(str,find);
