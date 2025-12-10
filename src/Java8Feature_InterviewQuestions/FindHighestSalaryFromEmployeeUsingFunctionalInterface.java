@@ -15,7 +15,6 @@ public class FindHighestSalaryFromEmployeeUsingFunctionalInterface {
 			};
 		
 		System.out.println(obj.highestSalary(e1,e2,e3));
-		
 	}
 }
 
