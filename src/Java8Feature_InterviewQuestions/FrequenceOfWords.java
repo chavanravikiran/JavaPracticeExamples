@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//List<String> list = Arrays.asList(“Akshada”, “Shinde”);
+//I/P ["Akshada", "Shinde"];
+//O/P {Shinde=1, Akshada=1}
 public class FrequenceOfWords {
 	public static void main(String[] args) {
 		List<String> list = Arrays.asList("Akshada","Shinde");
