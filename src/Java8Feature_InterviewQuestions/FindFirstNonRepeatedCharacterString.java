@@ -17,7 +17,7 @@ public class FindFirstNonRepeatedCharacterString {
 		
 		System.out.println(
 				Arrays.stream(str.split(""))////'s','w','i','s','s'
-				.filter(x->str.indexOf(x) == str.lastIndexOf(x))  //s == 
+				.filter(x->str.indexOf(x) == str.lastIndexOf(x))
 				.findFirst().get()
 		);
 	}
