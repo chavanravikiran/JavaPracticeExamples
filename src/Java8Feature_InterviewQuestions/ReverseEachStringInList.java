@@ -31,7 +31,7 @@ public class ReverseEachStringInList {
 		String temp = null;
 		for (String str : words) {
 			for (int i = str.length()-1; i >= 0; i--) {
-				str.charAt(i);
+				temp+=str.charAt(i);
 //				System.out.println(str.charAt(i));
 			}
 			rev.add(temp);
