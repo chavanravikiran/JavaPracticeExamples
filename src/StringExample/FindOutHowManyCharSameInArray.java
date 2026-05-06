@@ -3,7 +3,7 @@ package StringExample;
 //String[] str ={"Flower","Fly","Floor","flap"};
 public class FindOutHowManyCharSameInArray {
 	public static void main(String[] argsD) {
-		String[] str ={"Flower","Flowe","Flower","Flowp"};
+		String[] str ={"Flower","Flowe","Flower","Flowp","Fly"};
 		
 		String temp= str[0];
 		String result = "";
