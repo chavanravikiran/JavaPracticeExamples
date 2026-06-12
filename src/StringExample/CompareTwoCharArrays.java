@@ -7,7 +7,6 @@ public class CompareTwoCharArrays {
 		char[] arr2 = {'J','a','v','a'};
 		
 		System.out.println(arr1.equals(arr2));
-		
 		System.out.println(java.util.Arrays.equals(arr1, arr2));
 	}
 }
