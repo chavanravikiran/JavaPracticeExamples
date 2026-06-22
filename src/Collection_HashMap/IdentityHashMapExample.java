@@ -22,6 +22,7 @@ public class IdentityHashMapExample {
 		itMap.put(s2, "Java");
 		
 		
+		
 		System.out.println(itMap);
 		
 	}
