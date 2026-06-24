@@ -5,10 +5,13 @@ import java.util.List;
 
 //String is immutable 
 //now i want to create immutable object
-	//fields are final private
-	//no setter method
-	//class is final
-	//Deep Copy of List ,map ,etc in constructor
+		//	Rules for Immutable Class
+		//	Declare the class as final (cannot be extended).
+		//	Make all fields private and final.
+		//	Initialize fields only through the constructor.
+		//	Do not provide setter methods.
+		//	Provide only getter methods.
+		//	If a field is mutable (like Date, List, etc.), return a defensive copy.
 public class ObjectClassDemo{
 	public static void main(String[] args) {
 		List<String> langauges = new ArrayList<>();
