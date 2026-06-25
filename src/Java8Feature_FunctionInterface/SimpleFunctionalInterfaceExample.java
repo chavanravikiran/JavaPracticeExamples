@@ -23,12 +23,13 @@ public class SimpleFunctionalInterfaceExample {
 	 public static void main(String[] args) {
 	        // Create a lambda for the functional interface
 	        Sayable sayable = (msg) -> System.out.println("You said: " + msg);
-
+	        
 	        sayable.say("Hello Functional Interface!");
 	        
 	        sayable.greet();
 	        
 	        Sayable.info();
 	        Sayable.infoV1("HHHHHHHH");
+	        
 	    }
 }
