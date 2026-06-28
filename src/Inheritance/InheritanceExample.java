@@ -28,6 +28,8 @@ class Cats extends Animals{
 	void pee() {
 		System.out.println("Animals Method ");
 	}
+	
+	
 }
 
 public class InheritanceExample {

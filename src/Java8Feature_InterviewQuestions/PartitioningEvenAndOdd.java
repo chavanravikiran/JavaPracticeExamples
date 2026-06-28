@@ -12,7 +12,7 @@ public class PartitioningEvenAndOdd {
 				.filter(x-> x != null)
 				.collect(Collectors.partitioningBy(x -> x % 2 == 0))
 				.entrySet().stream()
-				.collect(Collectors.toMap(x->x.getKey() == false ? "Even" : "Odd", x->x.getValue()))
+				.collect(Collectors.toMap(x->x.getKey() == false ? "Odd" : "Even", x->x.getValue()))
 		);
 	}
 }
