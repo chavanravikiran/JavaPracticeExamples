@@ -3,6 +3,7 @@ package Java8Feature_InterviewQuestions;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EmployeeClassLevelStream {
@@ -11,7 +12,7 @@ public class EmployeeClassLevelStream {
 				new EntityEmployee(1, "Ravi", "IT", 100),
 				new EntityEmployee(2, "Rushi", "Computer", 100),
 				new EntityEmployee(3, "Dhampal", "HR", 200),
-				new EntityEmployee(4, "Rakesh", "Account", 150),
+				new EntityEmployee(4, "Rakesh", "HR", 150),
 				new EntityEmployee(5, "Raj", "ScrumMaster", 250)
 				);
 		
@@ -78,6 +79,64 @@ public class EmployeeClassLevelStream {
 		//8. Highest Salary Employee
 		System.out.println(employee.stream()
 		.min((x,y)->Double.compare((x.getSalary()), y.getSalary())));
+		
+		// 9. Total Salary
+		Double sumOfSalary = employee.stream()
+				.mapToDouble(x->x.getSalary()).sum();
+		System.out.println("Total Salary "+sumOfSalary);
+		
+		Double sumOfSalary1 = employee.stream()
+		        .map(x -> x.getSalary())
+		        .reduce(0.0, (a, b) -> a + b);
+
+		System.out.println("Total Salary = " + sumOfSalary1);
+		
+		// 11. Group By Department
+		Map<String, List<EntityEmployee>> groupByDept = employee.stream()
+		.collect(Collectors.groupingBy(x->x.getDepartment()));
+		
+		List<List<EntityEmployee>> list=groupByDept.entrySet().stream().map(x->x.getValue())
+		.collect(Collectors.toList());
+		
+		list.stream()
+		.flatMap(x->x.stream())
+		.forEach(System.out::println);
+		
+		
+		// 12. Count Employees in Each Department
+		Map<String,Long> deptCount=employee.stream()
+		.collect(Collectors.groupingBy(x->x.getDepartment(),Collectors.counting()));
+		 System.out.println("Count Employees in Each Department : "+deptCount);
+
+		 // 13.Find Any Employee 
+		 System.out.println("\nFind Any Employee");
+		 
+		 employee.stream()
+		 .findAny()
+		 .ifPresent(System.out::println);
+		 
+		 // 14. Distinct Departments
+		 List<String> distinctDept = employee.stream()
+		 .map(x->x.getDepartment())
+		 .distinct()
+		 .collect(Collectors.toList());
+		 
+		 System.out.println("Distinct Departments : "+distinctDept);
+		 
+		 //15. Skip First 2 Employees
+		List<EntityEmployee> skipFirstNRecords = employee.stream()
+		 .skip(2)
+		 .collect(Collectors.toList());
+		
+		System.out.println("Skip First 2 Employees : "+skipFirstNRecords);
+		
+		//16. Limit First 3 Employees
+		List<EntityEmployee> printFirstNRecords = employee.stream()
+				 .limit(3)
+				 .collect(Collectors.toList());
+		
+		System.out.println("Limit First 3 Employees : "+printFirstNRecords);
+		
 		
 	}
 }
