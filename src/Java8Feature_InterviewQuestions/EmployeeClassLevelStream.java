@@ -4,9 +4,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class EmployeeClassLevelStream {
+public class EmployeeClassLevelStream{
 	public static void main(String[] args) {
 		List<EntityEmployee> employee = Arrays.asList(
 				new EntityEmployee(1, "Ravi", "IT", 100),
@@ -137,7 +139,65 @@ public class EmployeeClassLevelStream {
 		
 		System.out.println("Limit First 3 Employees : "+printFirstNRecords);
 		
+		//17. Find the second-highest salary.
+		Double highestS = employee.stream()
+		.sorted((a,b)->Double.compare(b.getSalary(), a.getSalary())).skip(1).max((x,y)->Double.compare(x.getSalary(), y.getSalary())).get().getSalary();
+
+		System.out.println("second Highest "+highestS);
+
+		//Find the second-highest salary.
+		List<EntityEmployee> sort = employee.stream()
+		.sorted(Comparator.comparing(EntityEmployee::getSalary).reversed())
+		.collect(Collectors.toList());
+				
+		System.out.println("2nd Highest Salary : "+sort.stream().skip(1).limit(1).map(x->x.getSalary()).findFirst().get());
+
+		System.out.println("2nd Highest Salary : "+employee.stream()
+				.sorted(Comparator.comparing(EntityEmployee::getSalary).reversed())
+				.skip(1).limit(1).map(x->x.getSalary()).findFirst().get());
 		
+		
+		//18. Calculate average salary department-wise.
+		Double average =employee.stream()
+		.mapToDouble(x->x.getSalary()).average().getAsDouble();
+		
+		System.out.println("Calculate average salary department-wise : "+average);
+		
+		Double averageUsingReduce = employee.stream()
+		        .map(x->x.getSalary())
+		        .reduce(0.0, (a, b) -> a + b) / employee.size();
+
+		System.out.println("Average Salary using Reduce Method = " + averageUsingReduce);
+		
+		// 19. Find duplicate department names
+		List<String> duplicateDept = employee.stream()
+		.collect(Collectors.groupingBy(x->x.getDepartment(),Collectors.counting()))
+		.entrySet().stream()
+		.filter(x->x.getValue()>=2)
+		.map(x->x.getKey())
+		.collect(Collectors.toList());
+		
+		System.out.println("Find duplicate department names : "+ duplicateDept);
+		
+		//20 .Join all employee names into a comma-separated string.
+		String employeeNames = employee.stream()
+		        .map(x->x.getName())
+		        .collect(Collectors.joining(", "));
+
+		System.out.println("Join all employee names into a comma-separated string : "+employeeNames);
+		
+		// 21. Find the first employee from the HR department.
+		EntityEmployee findFirst = employee.stream()
+		.filter(x->x.getDepartment().equals("HR"))
+		.findFirst().get();
+		
+		System.out.println("Find the first employee from the HR department : "+findFirst);
+		
+		// 22. Convert List<Employee> to Map<Integer, Employee>.
+		Map<Integer,EntityEmployee> listToMap = employee.stream()
+		.collect(Collectors.toMap(x->x.getId(), x->x,(existing, duplicate) -> existing));
+		
+		System.out.println("Convert List<Employee> to Map<Integer, Employee> :"+ listToMap);
 	}
 }
 
