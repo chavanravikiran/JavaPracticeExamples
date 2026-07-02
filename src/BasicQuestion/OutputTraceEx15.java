@@ -12,7 +12,7 @@ public class OutputTraceEx15 {
 }
 
 abstract class Parents15{
-	public abstract void printMessage();
+	public abstract void printMessage();  //jr static aste tr override nahi hot method
 }
 
 class Child15 extends Parents15{
