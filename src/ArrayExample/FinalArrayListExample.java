@@ -12,6 +12,8 @@ public class FinalArrayListExample {
 		System.out.println(list);
 		
 		final ArrayList<Integer> newList = list;
+		list.add(3);
+		
 		System.out.println(newList);
 	}
 	
