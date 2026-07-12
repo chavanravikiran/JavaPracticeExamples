@@ -18,6 +18,7 @@ public class ArrayDequeExample {
 		deq.add(82);
 		deq.add(52);
 //		deq.add(null);
+
 		
 		System.out.println(deq);
 	}
