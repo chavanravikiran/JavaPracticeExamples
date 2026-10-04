@@ -196,6 +196,12 @@ public class EmployeeClassLevelStream{
 		.collect(Collectors.toMap(x->x.getId(), x->x,(existing, duplicate) -> existing));
 		
 		System.out.println("Convert List<Employee> to Map<Integer, Employee> :"+ listToMap);
+		
+		//23 upperCase
+		List<String> collect = employee.stream()
+		.map(x->x.getName().toUpperCase())
+		.collect(Collectors.toList());
+		System.out.println(collect);
 	}
 }
 
