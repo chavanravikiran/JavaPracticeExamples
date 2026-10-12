@@ -21,5 +21,22 @@ public class AnagramCheck {
 		 }else {
 			 System.out.println("Given String is not anagram !!");
 		 }
+		 
+		 
+		 ///
+		 char [] ch1 = s1.toCharArray();
+		 Arrays.sort(ch1);
+		 String str1 = new String(ch1);
+		 
+		 char [] ch2 = s2.toCharArray();
+		 Arrays.sort(ch2);
+		 String str2 = new String(ch2);
+		 
+		 if(str1.equals(str2)) {
+			 System.out.println("Given String is anagram !!");
+		 }else {
+			 System.out.println("Given String not anagram !!");
+		 }
+		 
 	}
 }
