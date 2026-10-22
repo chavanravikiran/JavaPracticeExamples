@@ -21,6 +21,20 @@ public class SortEmployeeBySalary {
 		.collect(Collectors.toList());
 		
 		System.out.println(sorderEmpl);
+		
+		//Average Salary
+		Double sum  = orEmp.stream()
+		.map(x->x.getSalary())
+		.reduce(0.0, (x, y) -> x + y);
+	
+		Double avg = sum / orEmp.size();
+		System.out.println("Avarage of Salary : "+avg);
+		
+		System.out.println("Find Out Summary Statistics : "+orEmp.stream()
+		.mapToDouble(x->x.getSalary())
+		.summaryStatistics());
+		
+		
 	}
 	
 }
