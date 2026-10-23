@@ -1,6 +1,7 @@
 package Java8Feature_InterviewQuestions;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class RepeatingOrNonRepeatingChar {
 	public static void main(String[] args) {
@@ -35,5 +36,14 @@ public class RepeatingOrNonRepeatingChar {
                 .reduce((first, second) -> second)
                 .orElse("Not Found")
         );
+        
+        
+        System.out.println("First Non Repeating : "+Arrays.stream(str.split(""))
+        .collect(Collectors.groupingBy(x->x,Collectors.counting()))
+        .entrySet().stream()
+        .filter(x->x.getValue()==1)
+        .map(x->x.getKey())
+        .findFirst().get());
+        
 	}
 }
