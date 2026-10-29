@@ -22,7 +22,7 @@ public class StringReverseSorting {
 		String substring = "what is your name what is your name what are you doing";
 		String find = "what";
 		
-		System.out.println(substring.split(find).length);
+		System.out.println(substring.split(find).length-1);
 	}
 
 	
