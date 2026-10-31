@@ -12,6 +12,7 @@ public class Top3FrequentWords {
 		 System.out.println(Arrays.stream(paragraph.replaceAll("[^a-z\\s]", "").split(" "))
 					.collect(Collectors.groupingBy(x->x,Collectors.counting()))
 					.entrySet().stream()
+					.distinct()
 					.sorted((x,y)->Long.compare(y.getValue(), x.getValue()))
 					.collect(Collectors.toMap(x->x.getKey(), x->x.getValue()))
 		);
@@ -20,6 +21,7 @@ public class Top3FrequentWords {
 		 System.out.println(Arrays.stream(paragraph.replaceAll("[^a-z\\s]", "").split(" "))
 			.collect(Collectors.groupingBy(x->x,Collectors.counting()))
 			.entrySet().stream()
+			.distinct()
 			.sorted((x,y)->Long.compare(y.getValue(), x.getValue()))
 			.limit(3)
 			.collect(Collectors.toMap(x->x.getKey(), x->x.getValue()))
